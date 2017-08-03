@@ -33,6 +33,7 @@ This module makes the following assumptions:
 - `maintenance_window` - The window to perform maintenance in. Syntax: 'ddd:hh24:mi-ddd:hh24:mi' UTC, default: "Mon:00:00-Mon:03:00"
 - `skip_final_snapshot` - if `true` (default), DB won't be backed up before deletion
 - `copy_tags_to_snapshot` - copy all tags from RDS database to snapshot (default `true`)
+- `snapshot_identifier` - Specifies whether or not to create this database from a snapshot. This correlates to the snapshot ID you'd find in the RDS console, e.g: rds:production-2015-06-26-06-05. Default is ""
 - `backup_retention_period` - backup retention period in days (default: 0), must be `> 0` to enable backups
 - `backup_window` - when to perform DB snapshot, default "22:00-03:00"; can't overlap with maintenance window
 - `tags` - A mapping of tags to assign to the DB instance
@@ -152,6 +153,7 @@ module "my_rds_instance" {
 - `maintenance_window`
 - `skip_final_snapshot`
 - `copy_tags_to_snapshot`
+- `snapshot_identifier`
 - `backup_retention_period`
 - `backup_window`
 - `tags`

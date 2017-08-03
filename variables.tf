@@ -121,6 +121,11 @@ variable "copy_tags_to_snapshot" {
   default     = true
 }
 
+variable "snapshot_identifier" {
+  description = "Specifies whether or not to create this database from a snapshot. This correlates to the snapshot ID you'd find in the RDS console, e.g: rds:production-2015-06-26-06-05."
+  default     = ""
+}
+
 variable "backup_window" {
   description = "When AWS can run snapshot, can't overlap with maintenance window"
   default     = "22:00-03:00"
