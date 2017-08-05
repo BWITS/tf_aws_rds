@@ -40,7 +40,6 @@ resource "aws_db_instance" "main_rds_instance" {
   # Snapshots and backups
   skip_final_snapshot   = "${var.skip_final_snapshot}"
   copy_tags_to_snapshot = "${var.copy_tags_to_snapshot}"
-  snapshot_identifier   = "${var.snapshot_identifier}"
 
   backup_retention_period = "${var.backup_retention_period}"
   backup_window           = "${var.backup_window}"
