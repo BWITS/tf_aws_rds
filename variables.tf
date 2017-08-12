@@ -68,7 +68,7 @@ variable "apply_immediately" {
 
 variable "maintenance_window" {
   description = "The window to perform maintenance in. Syntax: 'ddd:hh24:mi-ddd:hh24:mi' UTC "
-  default     = "Mon:00:00-Mon:03:00"
+  default     = "Mon:03:00-Mon:04:00"
 }
 
 variable "database_name" {
