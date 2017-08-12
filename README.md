@@ -30,7 +30,7 @@ This module makes the following assumptions:
 - `allow_major_version_upgrade` - Allow upgrading of major version of database (eg. from Postgres 9.5.x to Postgres 9.6.x), default: false
 - `auto_minor_version_upgrade` - Automatically upgrade minor version of the DB (eg. from Postgres 9.5.3 to Postgres 9.5.4), default: true
 - `apply_immediately` - Specifies whether any database modifications are applied immediately, or during the next maintenance window, default: false
-- `maintenance_window` - The window to perform maintenance in. Syntax: 'ddd:hh24:mi-ddd:hh24:mi' UTC, default: "Mon:00:00-Mon:03:00"
+- `maintenance_window` - The window to perform maintenance in. Syntax: 'ddd:hh24:mi-ddd:hh24:mi' UTC, default: "Mon:03:00-Mon:04:00"
 - `skip_final_snapshot` - if `true` (default), DB won't be backed up before deletion
 - `copy_tags_to_snapshot` - copy all tags from RDS database to snapshot (default `true`)
 - `backup_retention_period` - backup retention period in days (default: 0), must be `> 0` to enable backups
